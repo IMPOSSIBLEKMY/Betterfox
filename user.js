@@ -228,7 +228,7 @@ user_pref("browser.tabs.hoverPreview.enabled", false);
 // Personal Preferences-----------------------
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("ui.key.menuAccessKeyFocuses", false);
-user_pref("widget.windows.window_occlusion_tracking.enabled", false);
+user_pref("widget.windows.window_occlusion_tracking.enabled", true);
 
 // PREF: make Strict ETP less aggressive
 user_pref("browser.contentblocking.features.strict", "tp,tpPrivate,cookieBehavior5,cookieBehaviorPBM5,cm,fp,stp,emailTP,emailTPPrivate,-lvl2,rp,rpTop,ocsp,qps,qpsPBM,fpp,fppPrivate,3pcd,btp");
@@ -275,10 +275,8 @@ user_pref("extensions.postDownloadThirdPartyPrompt", false);
 // PREF: delete all browsing data on shutdown
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.clearOnShutdown_v2.cache", true);
-user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true);
 user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", true);
 user_pref("privacy.clearOnShutdown_v2.downloads", true); // [HIDDEN]
-user_pref("privacy.clearOnShutdown_v2.formdata", true);
 
 // PREF: after crashes or restarts, do not save extra session data
 // such as form content, scrollbar positions, and POST data

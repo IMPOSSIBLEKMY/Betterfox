@@ -228,7 +228,7 @@ user_pref("browser.tabs.hoverPreview.enabled", false);
 // Personal Preferences-----------------------
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("ui.key.menuAccessKeyFocuses", false);
-user_pref("widget.windows.window_occlusion_tracking.enabled", true);
+user_pref("widget.windows.window_occlusion_tracking.enabled", false);
 
 // PREF: make Strict ETP less aggressive
 user_pref("browser.contentblocking.features.strict", "tp,tpPrivate,cookieBehavior5,cookieBehaviorPBM5,cm,fp,stp,emailTP,emailTPPrivate,-lvl2,rp,rpTop,ocsp,qps,qpsPBM,fpp,fppPrivate,3pcd,btp");

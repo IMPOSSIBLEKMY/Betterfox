@@ -107,9 +107,6 @@ user_pref("extensions.enabledScopes", 5);
 /** HEADERS / REFERERS ***/
 user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
 
-/** CONTAINERS ***/
-user_pref("privacy.userContext.ui.enabled", true);
-
 /** SAFE BROWSING ***/
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 
@@ -137,6 +134,8 @@ user_pref("toolkit.coverage.opt-out", true);
 user_pref("toolkit.coverage.endpoint.base", "");
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
+user_pref("browser.ping-centre.telemetry", false);
+user_pref("beacon.enabled", false);
 
 /** EXPERIMENTS ***/
 user_pref("app.shield.optoutstudies.enabled", false);
@@ -184,10 +183,15 @@ user_pref("browser.urlbar.trending.featureGate", false);
 user_pref("dom.text_fragments.create_text_fragment.enabled", true);
 
 /** NEW TAB PAGE ***/
+user_pref("browser.newtabpage.enabled", false);
+user_pref("browser.newtab.preload", false);
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
+user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
+user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false);
 
 /** POCKET ***/
 user_pref("extensions.pocket.enabled", false);
@@ -211,7 +215,77 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 // visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
 
+// From Betterfox-----------------------
+user_pref("dom.battery.enabled", false);
+user_pref("browser.send_pings", false); 
 
+// Disable address bar popping out
+user_pref("browser.urlbar.openViewOnFocus", false);
+
+// Disable tab previews when hovering over them
+user_pref("browser.tabs.hoverPreview.enabled", false);
+
+// Personal Preferences-----------------------
+user_pref("browser.urlbar.speculativeConnect.enabled", false);
+user_pref("ui.key.menuAccessKeyFocuses", false);
+user_pref("widget.windows.window_occlusion_tracking.enabled", false);
+
+// PREF: make Strict ETP less aggressive
+user_pref("browser.contentblocking.features.strict", "tp,tpPrivate,cookieBehavior5,cookieBehaviorPBM5,cm,fp,stp,emailTP,emailTPPrivate,-lvl2,rp,rpTop,ocsp,qps,qpsPBM,fpp,fppPrivate,3pcd,btp");
+
+// PREF: improve font rendering by using DirectWrite everywhere like Chrome [WINDOWS]
+user_pref("gfx.font_rendering.cleartype_params.rendering_mode", 5);
+user_pref("gfx.font_rendering.cleartype_params.cleartype_level", 100);
+user_pref("gfx.font_rendering.directwrite.use_gdi_table_loading", false);
+
+// PREF: disable Firefox Sync
+user_pref("identity.fxaccounts.enabled", false);
+
+// PREF: disable the Firefox View tour from popping up
+user_pref("browser.firefox-view.feature-tour", "{\"screen\":\"\",\"complete\":true}");
+
+// PREF: disable login manager
+user_pref("signon.rememberSignons", false);
+
+// PREF: disable address and credit card manager
+user_pref("extensions.formautofill.addresses.enabled", false);
+user_pref("extensions.formautofill.creditCards.enabled", false);
+
+// PREF: hide site shortcut thumbnails on New Tab page
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+
+// PREF: hide weather on New Tab page
+user_pref("browser.newtabpage.activity-stream.showWeather", false);
+
+// PREF: hide dropdown suggestions when clicking on the address bar
+user_pref("browser.urlbar.suggest.topsites", false);
+
+// PREF: disable unified search button
+user_pref("browser.urlbar.scotchBonnet.enableOverride", false);
+
+// PREF: ask where to save every file
+user_pref("browser.download.useDownloadDir", true);
+
+// PREF: ask whether to open or save new file types
+user_pref("browser.download.always_ask_before_handling_new_types", true);
+
+// PREF: display the installation prompt for all extensions
+user_pref("extensions.postDownloadThirdPartyPrompt", false);
+
+// PREF: delete all browsing data on shutdown
+user_pref("privacy.sanitize.sanitizeOnShutdown", true);
+user_pref("privacy.clearOnShutdown_v2.cache", true);
+user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true);
+user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", true);
+user_pref("privacy.clearOnShutdown_v2.downloads", true); // [HIDDEN]
+user_pref("privacy.clearOnShutdown_v2.formdata", true);
+
+// PREF: after crashes or restarts, do not save extra session data
+// such as form content, scrollbar positions, and POST data
+user_pref("browser.sessionstore.privacy_level", 2);
+
+// PREF: set DoH provider
+user_pref("network.trr.uri", "https://dns.dnswarden.com/00000000000000000000048"); // Hagezi Light + TIF
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *

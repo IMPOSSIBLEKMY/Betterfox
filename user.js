@@ -266,9 +266,6 @@ user_pref("browser.urlbar.scotchBonnet.enableOverride", false);
 // PREF: ask where to save every file
 user_pref("browser.download.useDownloadDir", true);
 
-// PREF: ask whether to open or save new file types
-user_pref("browser.download.always_ask_before_handling_new_types", true);
-
 // PREF: display the installation prompt for all extensions
 user_pref("extensions.postDownloadThirdPartyPrompt", false);
 

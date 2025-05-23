@@ -130,6 +130,7 @@ user_pref("toolkit.telemetry.updatePing.enabled", false);
 user_pref("toolkit.telemetry.bhrPing.enabled", false);
 user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
 user_pref("toolkit.telemetry.coverage.opt-out", true);
+user_pref("toolkit.telemetry.pioneer-new-studies-available", false);
 user_pref("toolkit.coverage.opt-out", true);
 user_pref("toolkit.coverage.endpoint.base", "");
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
@@ -230,6 +231,9 @@ user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("ui.key.menuAccessKeyFocuses", false);
 user_pref("widget.windows.window_occlusion_tracking.enabled", false);
 
+// PREF: no search on New Tab page
+user_pref("browser.newtabpage.activity-stream.showSearch", false);
+
 // PREF: make Strict ETP less aggressive
 user_pref("browser.contentblocking.features.strict", "tp,tpPrivate,cookieBehavior5,cookieBehaviorPBM5,cm,fp,stp,emailTP,emailTPPrivate,-lvl2,rp,rpTop,ocsp,qps,qpsPBM,fpp,fppPrivate,3pcd,btp");
 
@@ -240,6 +244,9 @@ user_pref("gfx.font_rendering.directwrite.use_gdi_table_loading", false);
 
 // PREF: disable Firefox Sync
 user_pref("identity.fxaccounts.enabled", false);
+user_pref("dom.push.enabled", false);
+user_pref("dom.push.connection.enabled", false);
+user_pref("browser.tabs.firefox-view", false);
 
 // PREF: disable the Firefox View tour from popping up
 user_pref("browser.firefox-view.feature-tour", "{\"screen\":\"\",\"complete\":true}");
@@ -250,6 +257,16 @@ user_pref("signon.rememberSignons", false);
 // PREF: disable address and credit card manager
 user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
+
+// PREF: disable chat-bot
+user_pref("browser.ml.chat.enabled", false);
+user_pref("browser.ml.chat.shortcuts", false);
+user_pref("browser.ml.chat.sidebar", false);
+
+// PREF: disable tranlations
+user_pref("browser.translations.enable", false);
+user_pref("browser.translations.select.enable", false);
+user_pref("browser.translations.automaticallyPopup", false);
 
 // PREF: hide site shortcut thumbnails on New Tab page
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);

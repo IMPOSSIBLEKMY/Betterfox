@@ -300,6 +300,7 @@ user_pref("privacy.clearOnShutdown_v2.downloads", true); // [HIDDEN]
 user_pref("browser.sessionstore.privacy_level", 2);
 
 // PREF: set DoH provider
+// NOTE: somehow Firefox doesn't modify this config, you have to do this config by yourself
 user_pref("network.trr.uri", "https://dns.dnswarden.com/00000000000000000000048"); // Hagezi Light + TIF
 
 /****************************************************************************

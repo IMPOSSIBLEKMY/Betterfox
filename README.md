@@ -92,36 +92,34 @@ The `user.js` — a configuration file that controls Firefox settings — is cur
 
 Beacon Perplexity fixed with TamperMonkeyScript:
 
-{
-// ==UserScript==
-// @name         Perplexity SendBeacon Fix
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  Correctif pour Perplexity.ai lorsque sendBeacon est désactivé
-// @author       VotreNom
-// @match        https://*.perplexity.ai/*
-// @grant        none
-// ==/UserScript==
-
-(function() {
-    'use strict';
-    
-    // Si sendBeacon n'est pas une fonction, la définir
-    if (typeof navigator.sendBeacon !== 'function') {
-        navigator.sendBeacon = function(url, data) {
-            // Alternative utilisant fetch avec keepalive
-            fetch(url, {
-                method: 'POST',
-                body: data,
-                keepalive: true,
-                credentials: 'include'
-            });
-            return true;
-        };
-        console.log("SendBeacon polyfill activé pour Perplexity.ai");
-    }
-})();
-}
+        // ==UserScript==
+        // @name         Perplexity SendBeacon Fix
+        // @namespace    http://tampermonkey.net/
+        // @version      0.1
+        // @description  Correctif pour Perplexity.ai lorsque sendBeacon est désactivé
+        // @author       VotreNom
+        // @match        https://*.perplexity.ai/*
+        // @grant        none
+        // ==/UserScript==
+        
+        (function() {
+            'use strict';
+            
+            // Si sendBeacon n'est pas une fonction, la définir
+            if (typeof navigator.sendBeacon !== 'function') {
+                navigator.sendBeacon = function(url, data) {
+                    // Alternative utilisant fetch avec keepalive
+                    fetch(url, {
+                        method: 'POST',
+                        body: data,
+                        keepalive: true,
+                        credentials: 'include'
+                    });
+                    return true;
+                };
+                console.log("SendBeacon polyfill activé pour Perplexity.ai");
+            }
+        })();
 
 If you like the project, leave a :star: (top right) and become a [stargazer](https://github.com/yokoffing/Betterfox/stargazers)!
 

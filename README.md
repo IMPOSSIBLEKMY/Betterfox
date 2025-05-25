@@ -93,13 +93,13 @@ The `user.js` — a configuration file that controls Firefox settings — is cur
 Beacon Perplexity fixed with TamperMonkeyScript:
 
         // ==UserScript==
-        // u/name         Perplexity SendBeacon Fix
-        // u/namespace    http://tampermonkey.net/
-        // u/version      0.1
-        // u/description  Correctif pour Perplexity.ai lorsque sendBeacon est désactivé
-        // u/author       VotreNom
-        // u/match        https://*.perplexity.ai/*
-        // u/grant        none
+        // @name         Perplexity SendBeacon Fix
+        // @namespace    http://tampermonkey.net/
+        // @version      0.1
+        // @description  Correctif pour Perplexity.ai lorsque sendBeacon est désactivé
+        // @author       VotreNom
+        // @match        https://*.perplexity.ai/*
+        // @grant        none
         // ==/UserScript==
         
         (function() {

@@ -92,6 +92,7 @@ The `user.js` — a configuration file that controls Firefox settings — is cur
 
 Beacon Perplexity fixed with TamperMonkeyScript:
 
+{
 // ==UserScript==
 // @name         Perplexity SendBeacon Fix
 // @namespace    http://tampermonkey.net/
@@ -120,6 +121,7 @@ Beacon Perplexity fixed with TamperMonkeyScript:
         console.log("SendBeacon polyfill activé pour Perplexity.ai");
     }
 })();
+}
 
 If you like the project, leave a :star: (top right) and become a [stargazer](https://github.com/yokoffing/Betterfox/stargazers)!
 

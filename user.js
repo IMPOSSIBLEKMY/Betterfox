@@ -125,6 +125,7 @@ user_pref("toolkit.telemetry.enabled", false);
 user_pref("toolkit.telemetry.server", "data:,");
 user_pref("toolkit.telemetry.archive.enabled", false);
 user_pref("toolkit.telemetry.newProfilePing.enabled", false);
+user_pref("browser.send_pings", false);
 user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
 user_pref("toolkit.telemetry.updatePing.enabled", false);
 user_pref("toolkit.telemetry.bhrPing.enabled", false);
@@ -216,10 +217,6 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 // visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
 
-// From Betterfox-----------------------
-user_pref("dom.battery.enabled", false);
-user_pref("browser.send_pings", false); 
-
 // Disable address bar popping out
 user_pref("browser.urlbar.openViewOnFocus", false);
 
@@ -230,6 +227,12 @@ user_pref("browser.tabs.hoverPreview.enabled", false);
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("ui.key.menuAccessKeyFocuses", false);
 user_pref("widget.windows.window_occlusion_tracking.enabled", false);
+
+// Hmmmm I just found these, dont know if it works
+user_pref("dom.battery.enabled", false);
+user_pref("dom.ipc.processPriorityManager.backgroundUsesEcoQoS", false);
+user_pref("accessibility.force_disable", 1);
+user_pref("browser.tabs.unloadTabInContextMenu", true);
 
 // PREF: no search on New Tab page
 user_pref("browser.newtabpage.activity-stream.showSearch", false);
